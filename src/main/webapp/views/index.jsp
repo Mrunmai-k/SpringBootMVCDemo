@@ -9,9 +9,12 @@
 <body>	
 	Welcome to Spring
 
-    <form action="add">
-        enter first num: <input type="text" name="first" id="first"><br>
-        enter second num: <input type="text" name="second" id="second"><br>
+    <form action="addAlien">
+        <!-- enter first num: <input type="text" name="first" id="first"><br>
+        enter second num: <input type="text" name="second" id="second"><br> -->
+
+        enter your id <input type="text" name="aid" id="aid"><br>
+        enter your name <input type="text" name="aname" id="aname"><br> 
         <input type="submit">
     </form>
 </body>

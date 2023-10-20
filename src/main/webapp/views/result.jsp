@@ -7,6 +7,7 @@
 <title>SpringBoot MVC Demo</title>
 </head>
 <body>	
-    Result is: ${result}
+    <!-- Result is: ${result} -->
+    Result id : ${a1}
 </body>
 </html>
