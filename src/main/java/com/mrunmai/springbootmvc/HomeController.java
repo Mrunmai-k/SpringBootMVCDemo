@@ -1,9 +1,9 @@
 package com.mrunmai.springbootmvc;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class HomeController {
@@ -13,20 +13,20 @@ public class HomeController {
     }
 
     @RequestMapping("add")
-    public ModelAndView add(@RequestParam("first") int i, @RequestParam("second") int j) {
+    public String add(@RequestParam("first") int i, @RequestParam("second") int j, Model m) {
         // Instead of using Request object use RequestParam annotation.
         // int i = Integer.parseInt(req.getParameter("first"));
         // int j = Integer.parseInt(req.getParameter("second"));
 
-        ModelAndView mv = new ModelAndView();
-        mv.setViewName("result");
+        // ModelAndView mv = new ModelAndView("result");
+        // mv.setViewName("result");
         int result = i + j;
-        mv.addObject("result", result);
+        m.addAttribute("result", result);
 
         // HttpSession session = req.getSession();
         // session.setAttribute("result", result);
 
-        return mv;
+        return "result";
     }
 }
 
@@ -36,3 +36,6 @@ public class HomeController {
  * properties to tell the app that files are in views folder so added prefix. As
  * for the suffix we told the application that suffix is .jsp
  */
+
+// Instead of Model you can also use ModelMap object. This is used if you only
+// want to store the data in Model.
