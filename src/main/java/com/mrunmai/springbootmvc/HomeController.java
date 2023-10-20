@@ -1,12 +1,9 @@
 package com.mrunmai.springbootmvc;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class HomeController {
@@ -16,15 +13,19 @@ public class HomeController {
     }
 
     @RequestMapping("add")
-    public String add(@RequestParam("first")int i,@RequestParam("second")int j,HttpSession session){
+    public ModelAndView add(@RequestParam("first") int i, @RequestParam("second") int j) {
         // Instead of using Request object use RequestParam annotation.
         // int i = Integer.parseInt(req.getParameter("first"));
         // int j = Integer.parseInt(req.getParameter("second"));
-        
-        int result = i+j;
-        // HttpSession session = req.getSession();
-        session.setAttribute("result", result);
 
-        return "result.jsp";
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("result.jsp");
+        int result = i + j;
+        mv.addObject("result", result);
+
+        // HttpSession session = req.getSession();
+        // session.setAttribute("result", result);
+
+        return mv;
     }
 }
