@@ -10,6 +10,14 @@ import com.mrunmai.springbootmvc.model.Alien;
 
 @Controller
 public class HomeController {
+
+    // this will get called before any request and will create a model and adds the
+    // attribute to model
+    @ModelAttribute
+    public void ModelData(Model m) {
+        m.addAttribute("name", "Aliens");
+    }
+
     @RequestMapping("/")
     public String home() {
         return "index";
