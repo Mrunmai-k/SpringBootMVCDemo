@@ -3,7 +3,9 @@ package com.mrunmai.springbootmvc;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+// import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.mrunmai.springbootmvc.model.Alien;
@@ -40,7 +42,9 @@ public class HomeController {
         return "result";
     }
 
-    @RequestMapping("addAlien")
+    //Way 1 @RequestMapping(value="addAlien",method=RequestMethod.POST)
+    //Way 2
+    @PostMapping(value = "addAlien")
     public String addAlien(
             /* @RequestParam("aid") int aid, @RequestParam("aname") String aname, Model m */ @ModelAttribute("a1") Alien a) {
         /*
