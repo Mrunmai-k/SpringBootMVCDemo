@@ -62,8 +62,13 @@ public class HomeController {
     
     @GetMapping("getAlien")
     public String getAlien(@RequestParam int aid, Model m) {
-        //List<Alien> aliens = Arrays.asList(new Alien(101, "Mrunmai"), new Alien(102, "Sangram"));
         m.addAttribute("result",repo.findById(aid));
+        return "showAliens";
+    }
+    
+    @GetMapping("getAlienByName")
+    public String getAlienByName(@RequestParam String aname, Model m) {
+        m.addAttribute("result",repo.findByAname(aname));
         return "showAliens";
     }
 
