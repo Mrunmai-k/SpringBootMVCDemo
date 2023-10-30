@@ -63,7 +63,7 @@ public class HomeController {
     @GetMapping("getAlien")
     public String getAlien(@RequestParam int aid, Model m) {
         //List<Alien> aliens = Arrays.asList(new Alien(101, "Mrunmai"), new Alien(102, "Sangram"));
-        m.addAttribute("result",new Alien(aid,"Navin"));
+        m.addAttribute("result",repo.findById(aid));
         return "showAliens";
     }
 
@@ -71,7 +71,7 @@ public class HomeController {
     // Way 2
     @PostMapping(value = "addAlien")
     public String addAlien(
-            /* @RequestParam("aid") int aid, @RequestParam("aname") String aname, Model m */ @ModelAttribute("a1") Alien a) {
+            /* @RequestParam("aid") int aid, @RequestParam("aname") String aname, Model m */ @ModelAttribute("result") Alien a) {
         /*
          * Alien a = new Alien();
          * a.setAid(aid);
@@ -79,7 +79,8 @@ public class HomeController {
          * 
          * m.addAttribute("alien", a);
          */
-        return "result";
+    	repo.save(a);
+        return "showAliens";
     }
     // instead of writing this all commented section just create modelattri and it
     // will assign the values automatically.
