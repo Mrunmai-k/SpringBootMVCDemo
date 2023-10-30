@@ -3,6 +3,7 @@ package com.mrunmai.springbootmvc;
 import java.util.Arrays;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,11 +12,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 // import org.springframework.web.bind.annotation.RequestMethod;
 // import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.mrunmai.springbootmvc.model.Alien;
 
 @Controller
 public class HomeController {
+	
+	@Autowired
+	AlienRepo repo;
 
     // this will get called before any request and will create a model and adds the
     // attribute to model
@@ -50,8 +55,15 @@ public class HomeController {
 
     @GetMapping("getAliens")
     public String getAliens(Model m) {
-        List<Alien> aliens = Arrays.asList(new Alien(101, "Mrunmai"), new Alien(102, "Sangram"));
-        m.addAttribute("result",aliens);
+        //List<Alien> aliens = Arrays.asList(new Alien(101, "Mrunmai"), new Alien(102, "Sangram"));
+        m.addAttribute("result",repo.findAll());
+        return "showAliens";
+    }
+    
+    @GetMapping("getAlien")
+    public String getAlien(@RequestParam int aid, Model m) {
+        //List<Alien> aliens = Arrays.asList(new Alien(101, "Mrunmai"), new Alien(102, "Sangram"));
+        m.addAttribute("result",new Alien(aid,"Navin"));
         return "showAliens";
     }
 
