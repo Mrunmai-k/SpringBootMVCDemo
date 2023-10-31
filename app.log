@@ -1,0 +1,84 @@
+2023-10-31 20:28:30.697  INFO 5280 --- [restartedMain] c.m.s.SpringbootmvcApplication           : Starting SpringbootmvcApplication using Java 1.8.0_202 on MrunmaiHP with PID 5280 (D:\Post Internship\Java Practice\springbootmvc\target\classes started by Admin in D:\Post Internship\Java Practice\springbootmvc)
+2023-10-31 20:28:30.699  INFO 5280 --- [restartedMain] c.m.s.SpringbootmvcApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-10-31 20:28:30.820  INFO 5280 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-31 20:28:30.829  INFO 5280 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 1 JPA repository interfaces.
+2023-10-31 20:28:30.923  INFO 5280 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-31 20:28:30.924  INFO 5280 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-31 20:28:30.926  INFO 5280 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-10-31 20:28:30.933  WARN 5280 --- [restartedMain] o.a.tomcat.util.scan.StandardJarScanner  : Failed to scan [file:/D:/Post Internship/Java Practice/springbootmvc/target/classes/] from classloader hierarchy
+
+java.io.IOException: java.net.URISyntaxException: Illegal character in path at index 13: file:/D:/Post Internship/Java Practice/springbootmvc/target/classes/
+	at org.apache.tomcat.util.scan.StandardJarScanner.process(StandardJarScanner.java:415) [tomcat-embed-core-9.0.80.jar:9.0.80]
+	at org.apache.tomcat.util.scan.StandardJarScanner.processURLs(StandardJarScanner.java:318) [tomcat-embed-core-9.0.80.jar:9.0.80]
+	at org.apache.tomcat.util.scan.StandardJarScanner.doScanClassPath(StandardJarScanner.java:270) [tomcat-embed-core-9.0.80.jar:9.0.80]
+	at org.apache.tomcat.util.scan.StandardJarScanner.scan(StandardJarScanner.java:233) [tomcat-embed-core-9.0.80.jar:9.0.80]
+	at org.apache.jasper.servlet.TldScanner.scanJars(TldScanner.java:262) [tomcat-jasper-9.0.80.jar:9.0.80]
+	at org.apache.jasper.servlet.TldScanner.scan(TldScanner.java:104) [tomcat-jasper-9.0.80.jar:9.0.80]
+	at org.apache.jasper.servlet.JasperInitializer.onStartup(JasperInitializer.java:83) [tomcat-jasper-9.0.80.jar:9.0.80]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4904) [tomcat-embed-core-9.0.80.jar:9.0.80]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) [tomcat-embed-core-9.0.80.jar:9.0.80]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332) [tomcat-embed-core-9.0.80.jar:9.0.80]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322) [tomcat-embed-core-9.0.80.jar:9.0.80]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_202]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) [tomcat-embed-core-9.0.80.jar:9.0.80]
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134) [na:1.8.0_202]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866) [tomcat-embed-core-9.0.80.jar:9.0.80]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:795) [tomcat-embed-core-9.0.80.jar:9.0.80]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) [tomcat-embed-core-9.0.80.jar:9.0.80]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332) [tomcat-embed-core-9.0.80.jar:9.0.80]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322) [tomcat-embed-core-9.0.80.jar:9.0.80]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_202]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) [tomcat-embed-core-9.0.80.jar:9.0.80]
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134) [na:1.8.0_202]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866) [tomcat-embed-core-9.0.80.jar:9.0.80]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:249) [tomcat-embed-core-9.0.80.jar:9.0.80]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) [tomcat-embed-core-9.0.80.jar:9.0.80]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433) [tomcat-embed-core-9.0.80.jar:9.0.80]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) [tomcat-embed-core-9.0.80.jar:9.0.80]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:922) [tomcat-embed-core-9.0.80.jar:9.0.80]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) [tomcat-embed-core-9.0.80.jar:9.0.80]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486) [tomcat-embed-core-9.0.80.jar:9.0.80]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123) [spring-boot-2.7.16.jar:2.7.16]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104) [spring-boot-2.7.16.jar:2.7.16]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:481) [spring-boot-2.7.16.jar:2.7.16]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:211) [spring-boot-2.7.16.jar:2.7.16]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:184) [spring-boot-2.7.16.jar:2.7.16]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162) [spring-boot-2.7.16.jar:2.7.16]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:577) [spring-context-5.3.30.jar:5.3.30]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) [spring-boot-2.7.16.jar:2.7.16]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) [spring-boot-2.7.16.jar:2.7.16]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) [spring-boot-2.7.16.jar:2.7.16]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) [spring-boot-2.7.16.jar:2.7.16]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) [spring-boot-2.7.16.jar:2.7.16]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) [spring-boot-2.7.16.jar:2.7.16]
+	at com.mrunmai.springbootmvc.SpringbootmvcApplication.main(SpringbootmvcApplication.java:10) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_202]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) [spring-boot-devtools-2.7.16.jar:2.7.16]
+Caused by: java.net.URISyntaxException: Illegal character in path at index 13: file:/D:/Post Internship/Java Practice/springbootmvc/target/classes/
+	at java.net.URI$Parser.fail(URI.java:2848) ~[na:1.8.0_202]
+	at java.net.URI$Parser.checkChars(URI.java:3021) ~[na:1.8.0_202]
+	at java.net.URI$Parser.parseHierarchical(URI.java:3105) ~[na:1.8.0_202]
+	at java.net.URI$Parser.parse(URI.java:3053) ~[na:1.8.0_202]
+	at java.net.URI.<init>(URI.java:588) ~[na:1.8.0_202]
+	at java.net.URL.toURI(URL.java:946) ~[na:1.8.0_202]
+	at org.apache.tomcat.util.scan.StandardJarScanner.process(StandardJarScanner.java:392) [tomcat-embed-core-9.0.80.jar:9.0.80]
+	... 48 common frames omitted
+
+2023-10-31 20:28:30.964  INFO 5280 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-10-31 20:28:30.966  INFO 5280 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-31 20:28:30.967  INFO 5280 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 266 ms
+2023-10-31 20:28:30.992  INFO 5280 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Starting...
+2023-10-31 20:28:31.005  INFO 5280 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Start completed.
+2023-10-31 20:28:31.008  INFO 5280 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-31 20:28:31.011  INFO 5280 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-10-31 20:28:31.023  INFO 5280 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-31 20:28:31.024  INFO 5280 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-31 20:28:31.085  WARN 5280 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-31 20:28:31.122  INFO 5280 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-10-31 20:28:31.168  INFO 5280 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-10-31 20:28:31.177  INFO 5280 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-31 20:28:31.180  INFO 5280 --- [restartedMain] c.m.s.SpringbootmvcApplication           : Started SpringbootmvcApplication in 0.529 seconds (JVM running for 160.452)
+2023-10-31 20:28:31.182  INFO 5280 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
