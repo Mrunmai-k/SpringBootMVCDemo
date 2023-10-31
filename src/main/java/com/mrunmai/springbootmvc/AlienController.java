@@ -16,21 +16,23 @@ public class AlienController {
 	@Autowired
 	AlienRepo repo;
 
-	@GetMapping("aliens")
-//	@ResponseBody // otherwise it will consider return statement as jsp page, and not the data.
+	@GetMapping(path = "aliens", produces = "application/xml")
+	// @ResponseBody // otherwise it will consider return statement as jsp page, and
+	// not the data.
 	public List<Alien> getAliens() {
 		List<Alien> aliens = repo.findAll();
 
 		return aliens;
 	}
+	
 
 	@GetMapping("alien/{aid}")
-//	@ResponseBody
+	// @ResponseBody
 	public Alien getAlien(@PathVariable("aid") int aid) {
 		Alien a = repo.findById(aid).orElse(new Alien(0, ""));
 		return a;
 	}
-	
+
 	@PostMapping("alien")
 	public Alien addAlien(Alien a) {
 		repo.save(a);
