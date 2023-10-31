@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.mrunmai.springbootmvc.model.Alien;
@@ -18,7 +19,7 @@ public class AlienController {
 
 	@GetMapping(path = "aliens", produces = "application/xml")
 	// @ResponseBody // otherwise it will consider return statement as jsp page, and
-	// not the data.
+	// not the data. Converts the java object into json
 	public List<Alien> getAliens() {
 		List<Alien> aliens = repo.findAll();
 
@@ -33,9 +34,11 @@ public class AlienController {
 		return a;
 	}
 
-	@PostMapping("alien")
-	public Alien addAlien(Alien a) {
+	@PostMapping(path="alien",consumes = {"application/json"})
+	public Alien addAlien(@RequestBody Alien a) {
 		repo.save(a);
 		return a;
 	}
 }
+
+//@RequestBody converts the json object to java
