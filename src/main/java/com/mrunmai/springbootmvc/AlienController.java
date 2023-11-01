@@ -22,10 +22,9 @@ public class AlienController {
 	// not the data. Converts the java object into json
 	public List<Alien> getAliens() {
 		List<Alien> aliens = repo.findAll();
-
+		System.out.println("fetching aliens");
 		return aliens;
 	}
-	
 
 	@GetMapping("alien/{aid}")
 	// @ResponseBody
@@ -34,11 +33,11 @@ public class AlienController {
 		return a;
 	}
 
-	@PostMapping(path="alien",consumes = {"application/json"})
+	@PostMapping(path = "alien", consumes = { "application/json" })
 	public Alien addAlien(@RequestBody Alien a) {
 		repo.save(a);
 		return a;
 	}
 }
 
-//@RequestBody converts the json object to java
+// @RequestBody converts the json object to java
